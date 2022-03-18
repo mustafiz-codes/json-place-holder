@@ -3,6 +3,7 @@
 Resources:
 
 # Schema 
+```
 const postsSchema = new Schema(
   {
     userId: {
@@ -28,6 +29,7 @@ const postsSchema = new Schema(
   },
   { timestamps: true, versionKey: false }
 );
+```
       
 # typeDefs
 
