@@ -1,67 +1,61 @@
 # json-place-holder
 
-Resources:
+** Resources: **
 
-# Schema 
-```
-const postsSchema = new Schema(
-  {
-    userId: {
-      type: Number,
-      required: true,
-      trim: true,
-    },
-    postId: {
-      type: Number,
-      required: true,
-      trim: true,
-    },
-    title: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    body: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-  },
-  { timestamps: true, versionKey: false }
-);
-```
+# POSTS
+  1. ** Get All Posts **
+  ```
+    method: get
+    routes: /posts
+  ```
+  Response:
+  ```
+  [
+      {
+          "userId": ID
+          "postId": ID
+          "title": String
+          "body": String
+      },
+      {
+          "userId": ID
+          "postId": ID
+          "title": String
+          "body": String
+      },
+  ]
+  ```
   
-# typeDefs
-```
-  type Post {
-    userId: ID!
-    postId: ID!
-    title: String!
-    body: String!
-    createdAt: String
-    updatedAt: String
-  }
-  input CreatePostInput {
-    userId: ID!
-    title: String!
-    body: String!
-  }
-  input UpdatePostInput {
-    postId: ID!
-    title: String
-    body: String
-  }
-
-  #Queries
-  type Query {
-    getPosts(postId: ID!, page: Int, perPage: Int): [Posts!]
-    getPostByUser(userId: ID!): Post!
-  }
-
-  #Mutations
-  type Mutation {
-    createPost(createPostInput: CreatePostInput): Post!
-    updatePostById(updatePostInput: UpdatePostInput): Post!
-    removePostById(postId: ID!): Boolean!
-  }
-```
+  2. ** Get Single Post **
+  ```
+    method: get
+    routes: /post/id
+  ```
+  Response:
+  ```
+  {
+      "userId": ID
+      "postId": ID
+      "title": String
+      "body": String
+  },
+  ```
+  
+  3. ** Create Post **
+   ```
+    method: post
+    routes: /post/id
+  ```
+  Parameter:
+  ```
+  {
+      "userId": ID
+      "postId": ID
+      "title": String
+      "body": String
+  },
+  ```
+  
+  
+  
+  
