@@ -30,9 +30,9 @@ const postsSchema = new Schema(
   { timestamps: true, versionKey: false }
 );
 ```
-      
+  
 # typeDefs
-
+```
   type Post {
     userId: ID!
     postId: ID!
@@ -64,3 +64,4 @@ const postsSchema = new Schema(
     updatePostById(updatePostInput: UpdatePostInput): Post!
     removePostById(postId: ID!): Boolean!
   }
+```
