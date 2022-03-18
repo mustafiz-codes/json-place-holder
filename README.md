@@ -5,7 +5,7 @@
 # POSTS
   1. ** Get All Posts **
   ```
-    method: get
+    method: GET
     routes: /posts
   ```
   Response:
@@ -28,7 +28,7 @@
   
   2. ** Get Single Post **
   ```
-    method: get
+    method: GET
     routes: /post/id
   ```
   Response:
@@ -43,7 +43,7 @@
   
   3. ** Create Post **
    ```
-    method: post
+    method: POST
     routes: /post/id
   ```
   Parameter:
@@ -56,6 +56,36 @@
   },
   ```
   
+  
+  4. ** Update Post **
+   ```
+    method: PUT
+    routes: /post/id
+  ```
+  Parameter:
+  ```
+  {
+      "userId": ID
+      "postId": ID
+      "title": String
+      "body": String
+  },
+  ```
+  
+  
+  
+  3. ** Delete Post **
+   ```
+    method: post
+    routes: /post/id
+  ```
+  Parameter:
+  ```
+  {
+      "userId": ID
+      "postId": ID
+  },
+  ```
   
   
   
