@@ -18,7 +18,16 @@ app.get("/posts", (req, res) => {
   });
 });
 
-app.post("/post:id", (req, res) => {
+app.get("/posts/id", (req, res) => {
+  res.status(200).send({
+    userId: 1,
+    postId: 1,
+    title: "First Blog",
+    body: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
+  });
+});
+
+app.post("/post/2", (req, res) => {
   const { userId } = req.params;
   const { postId } = req.body;
 
